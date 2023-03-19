@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.tills {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+
+.till {
+    border: solid 2px #1a1a1a;
+    border-radius: 4px;
+    gap: 15px;
+    padding: 1.25rem;
+}

@@ -27,7 +27,7 @@ export function FirstSolution() {
   useEffect(() => {
     const timeout = setTimeout(() => {
       processQueues();
-    }, 10000);
+    }, 2000);
     return () => clearTimeout(timeout);
   }, [queues]);
 
