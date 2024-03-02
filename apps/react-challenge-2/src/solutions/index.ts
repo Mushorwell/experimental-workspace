@@ -1,1 +1,1 @@
-export * from './FirstSolution';
+export * from './FirstSolution/FirstSolution';

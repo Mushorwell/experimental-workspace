@@ -1,0 +1,12 @@
+button, .file-name {
+    background: none;
+    border-radius: 2px;
+    padding: 0.4rem;
+}
+
+.file-tree {
+    border-top: 2px solid;
+    margin-top: 20px;
+    padding-top: 20px;
+    text-align: left;
+}

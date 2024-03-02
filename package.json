@@ -13,16 +13,20 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
+    "@types/uuid4": "^2.0.3",
     "autoprefixer": "^10.4.14",
     "eslint-config-custom": "workspace:*",
     "postcss": "^8.4.21",
     "prettier": "latest",
-    "tailwindcss": "^3.2.7",
     "tailwind-config": "workspace:*",
+    "tailwindcss": "^3.2.7",
     "turbo": "latest"
   },
   "engines": {
     "node": ">=14.0.0"
   },
-  "packageManager": "pnpm@7.29.3"
+  "packageManager": "pnpm@7.29.3",
+  "dependencies": {
+    "uuid4": "^2.0.3"
+  }
 }
