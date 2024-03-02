@@ -1,5 +1,6 @@
 {
   "conventionalCommits.scopes": [
-    "react-challenge-2"
+    "react-challenge-2",
+    "admin-dashboard-1"
   ]
 }
