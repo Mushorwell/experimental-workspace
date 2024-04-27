@@ -8,6 +8,12 @@ importers:
 
   .:
     dependencies:
+      '@types/react-icons':
+        specifier: ^3.0.0
+        version: 3.0.0(react@18.2.0)
+      react-icons:
+        specifier: ^5.0.1
+        version: 5.0.1(react@18.2.0)
       uuid4:
         specifier: ^2.0.3
         version: 2.0.3
@@ -25,8 +31,14 @@ importers:
         specifier: ^8.4.21
         version: 8.4.21
       prettier:
-        specifier: latest
-        version: 2.8.4
+        specifier: ^3.2.5
+        version: 3.2.5
+      prettier-config-custom:
+        specifier: workspace:*
+        version: link:packages/prettier-config-custom
+      prettier-plugin-tailwindcss:
+        specifier: ^0.5.13
+        version: 0.5.13(prettier-plugin-organize-imports@3.2.4)(prettier@3.2.5)
       tailwind-config:
         specifier: workspace:*
         version: link:packages/tailwind-config
@@ -48,6 +60,9 @@ importers:
       react-dom:
         specifier: ^18
         version: 18.2.0(react@18.2.0)
+      ui:
+        specifier: workspace:*
+        version: link:../../packages/ui
     devDependencies:
       '@types/node':
         specifier: ^20
@@ -64,15 +79,33 @@ importers:
       eslint:
         specifier: ^8
         version: 8.4.1
+      eslint-config-custom:
+        specifier: workspace:*
+        version: link:../../packages/eslint-config-custom
       eslint-config-next:
         specifier: 14.1.1
         version: 14.1.1(eslint@8.4.1)(typescript@5.3.3)
       postcss:
         specifier: ^8
         version: 8.4.21
+      prettier:
+        specifier: ^3.2.5
+        version: 3.2.5
+      prettier-config-custom:
+        specifier: workspace:*
+        version: link:../../packages/prettier-config-custom
+      prettier-plugin-organize-imports:
+        specifier: ^3.2.4
+        version: 3.2.4(prettier@3.2.5)(typescript@5.3.3)
+      prettier-plugin-tailwindcss:
+        specifier: ^0.5.13
+        version: 0.5.13(prettier-plugin-organize-imports@3.2.4)(prettier@3.2.5)
       tailwindcss:
         specifier: ^3.3.0
         version: 3.4.1
+      tsconfig:
+        specifier: workspace:*
+        version: link:../../packages/tsconfig
       typescript:
         specifier: ^5
         version: 5.3.3
@@ -110,6 +143,9 @@ importers:
       eslint-config-custom:
         specifier: workspace:*
         version: link:../../packages/eslint-config-custom
+      prettier:
+        specifier: ^3.2.5
+        version: 3.2.5
       tsconfig:
         specifier: workspace:*
         version: link:../../packages/tsconfig
@@ -147,6 +183,9 @@ importers:
       postcss:
         specifier: ^8.4.21
         version: 8.4.21
+      prettier:
+        specifier: ^3.2.5
+        version: 3.2.5
       react-router-dom:
         specifier: ^6.9.0
         version: 6.9.0(react-dom@18.2.0)(react@18.2.0)
@@ -187,6 +226,9 @@ importers:
       eslint-config-custom:
         specifier: workspace:*
         version: link:../../packages/eslint-config-custom
+      prettier:
+        specifier: ^3.2.5
+        version: 3.2.5
       typescript:
         specifier: ^4.9.3
         version: 4.9.5
@@ -227,6 +269,9 @@ importers:
       eslint-config-custom:
         specifier: workspace:*
         version: link:../../packages/eslint-config-custom
+      prettier:
+        specifier: ^3.2.5
+        version: 3.2.5
       tsconfig:
         specifier: workspace:*
         version: link:../../packages/tsconfig
@@ -252,13 +297,36 @@ importers:
         specifier: 7.31.8
         version: 7.31.8(eslint@7.32.0)
     devDependencies:
+      prettier:
+        specifier: ^3.2.5
+        version: 3.2.5
       typescript:
         specifier: ^4.7.4
         version: 4.9.5
 
-  packages/tailwind-config: {}
+  packages/prettier-config-custom:
+    devDependencies:
+      prettier:
+        specifier: ^3.2.5
+        version: 3.2.5
+      prettier-plugin-organize-imports:
+        specifier: ^3.2.4
+        version: 3.2.4(prettier@3.2.5)(typescript@4.9.5)
+      prettier-plugin-tailwindcss:
+        specifier: ^0.5.13
+        version: 0.5.13(prettier-plugin-organize-imports@3.2.4)(prettier@3.2.5)
 
-  packages/tsconfig: {}
+  packages/tailwind-config:
+    devDependencies:
+      prettier:
+        specifier: ^3.2.5
+        version: 3.2.5
+
+  packages/tsconfig:
+    devDependencies:
+      prettier:
+        specifier: ^3.2.5
+        version: 3.2.5
 
   packages/ui:
     devDependencies:
@@ -274,6 +342,9 @@ importers:
       eslint-config-custom:
         specifier: workspace:*
         version: link:../eslint-config-custom
+      prettier:
+        specifier: ^3.2.5
+        version: 3.2.5
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -1179,6 +1250,15 @@ packages:
     dependencies:
       '@types/react': 18.0.28
     dev: true
+
+  /@types/react-icons@3.0.0(react@18.2.0):
+    resolution: {integrity: sha512-Vefs6LkLqF61vfV7AiAqls+vpR94q67gunhMueDznG+msAkrYgRxl7gYjNem/kZ+as2l2mNChmF1jRZzzQQtMg==}
+    deprecated: This is a stub types definition. react-icons provides its own type definitions, so you do not need this installed.
+    dependencies:
+      react-icons: 5.0.1(react@18.2.0)
+    transitivePeerDependencies:
+      - react
+    dev: false
 
   /@types/react@18.0.28:
     resolution: {integrity: sha512-RD0ivG1kEztNBdoAK7lekI9M+azSnitIn85h4iOiaLjaTrMjzslhaqCGaI4IyCJ1RljWiLCEu4jyrLLgqxBTew==}
@@ -3842,9 +3922,99 @@ packages:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
 
-  /prettier@2.8.4:
-    resolution: {integrity: sha512-vIS4Rlc2FNh0BySk3Wkd6xmwxB0FpOndW5fisM5H8hsZSxU2VWVB5CWIkIjWvrHjIhxk2g3bfMKM87zNTrZddw==}
-    engines: {node: '>=10.13.0'}
+  /prettier-plugin-organize-imports@3.2.4(prettier@3.2.5)(typescript@4.9.5):
+    resolution: {integrity: sha512-6m8WBhIp0dfwu0SkgfOxJqh+HpdyfqSSLfKKRZSFbDuEQXDDndb8fTpRWkUrX/uBenkex3MgnVk0J3b3Y5byog==}
+    peerDependencies:
+      '@volar/vue-language-plugin-pug': ^1.0.4
+      '@volar/vue-typescript': ^1.0.4
+      prettier: '>=2.0'
+      typescript: '>=2.9'
+    peerDependenciesMeta:
+      '@volar/vue-language-plugin-pug':
+        optional: true
+      '@volar/vue-typescript':
+        optional: true
+    dependencies:
+      prettier: 3.2.5
+      typescript: 4.9.5
+    dev: true
+
+  /prettier-plugin-organize-imports@3.2.4(prettier@3.2.5)(typescript@5.3.3):
+    resolution: {integrity: sha512-6m8WBhIp0dfwu0SkgfOxJqh+HpdyfqSSLfKKRZSFbDuEQXDDndb8fTpRWkUrX/uBenkex3MgnVk0J3b3Y5byog==}
+    peerDependencies:
+      '@volar/vue-language-plugin-pug': ^1.0.4
+      '@volar/vue-typescript': ^1.0.4
+      prettier: '>=2.0'
+      typescript: '>=2.9'
+    peerDependenciesMeta:
+      '@volar/vue-language-plugin-pug':
+        optional: true
+      '@volar/vue-typescript':
+        optional: true
+    dependencies:
+      prettier: 3.2.5
+      typescript: 5.3.3
+    dev: true
+
+  /prettier-plugin-tailwindcss@0.5.13(prettier-plugin-organize-imports@3.2.4)(prettier@3.2.5):
+    resolution: {integrity: sha512-2tPWHCFNC+WRjAC4SIWQNSOdcL1NNkydXim8w7TDqlZi+/ulZYz2OouAI6qMtkggnPt7lGamboj6LcTMwcCvoQ==}
+    engines: {node: '>=14.21.3'}
+    peerDependencies:
+      '@ianvs/prettier-plugin-sort-imports': '*'
+      '@prettier/plugin-pug': '*'
+      '@shopify/prettier-plugin-liquid': '*'
+      '@trivago/prettier-plugin-sort-imports': '*'
+      '@zackad/prettier-plugin-twig-melody': '*'
+      prettier: ^3.0
+      prettier-plugin-astro: '*'
+      prettier-plugin-css-order: '*'
+      prettier-plugin-import-sort: '*'
+      prettier-plugin-jsdoc: '*'
+      prettier-plugin-marko: '*'
+      prettier-plugin-organize-attributes: '*'
+      prettier-plugin-organize-imports: '*'
+      prettier-plugin-sort-imports: '*'
+      prettier-plugin-style-order: '*'
+      prettier-plugin-svelte: '*'
+    peerDependenciesMeta:
+      '@ianvs/prettier-plugin-sort-imports':
+        optional: true
+      '@prettier/plugin-pug':
+        optional: true
+      '@shopify/prettier-plugin-liquid':
+        optional: true
+      '@trivago/prettier-plugin-sort-imports':
+        optional: true
+      '@zackad/prettier-plugin-twig-melody':
+        optional: true
+      prettier-plugin-astro:
+        optional: true
+      prettier-plugin-css-order:
+        optional: true
+      prettier-plugin-import-sort:
+        optional: true
+      prettier-plugin-jsdoc:
+        optional: true
+      prettier-plugin-marko:
+        optional: true
+      prettier-plugin-organize-attributes:
+        optional: true
+      prettier-plugin-organize-imports:
+        optional: true
+      prettier-plugin-sort-imports:
+        optional: true
+      prettier-plugin-style-order:
+        optional: true
+      prettier-plugin-svelte:
+        optional: true
+    dependencies:
+      prettier: 3.2.5
+      prettier-plugin-organize-imports: 3.2.4(prettier@3.2.5)(typescript@4.9.5)
+    dev: true
+
+  /prettier@3.2.5:
+    resolution: {integrity: sha512-3/GWa9aOC0YeD7LUfvOG2NiDyhOWRvt1k+rcKhOuYnMY24iiCphgneUfJDyFXd6rZCAnuLBv6UeAULtrhT/F4A==}
+    engines: {node: '>=14'}
     hasBin: true
     dev: true
 
@@ -3879,6 +4049,14 @@ packages:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.23.0
+
+  /react-icons@5.0.1(react@18.2.0):
+    resolution: {integrity: sha512-WqLZJ4bLzlhmsvme6iFdgO8gfZP17rfjYEJ2m9RsZjZ+cc4k1hTzknEz63YS1MeT50kVzoa1Nz36f4BEx+Wigw==}
+    peerDependencies:
+      react: '*'
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
