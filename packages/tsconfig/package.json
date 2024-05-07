@@ -6,5 +6,8 @@
     "base.json",
     "nextjs.json",
     "react-library.json"
-  ]
+  ],
+  "devDependencies": {
+    "prettier": "^3.2.5"
+  }
 }

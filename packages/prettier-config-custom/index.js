@@ -1,4 +1,4 @@
-{
+module.exports = {
   "singleQuote": true,
   "trailingComma": "all",
   "bracketSpacing": true,
@@ -8,8 +8,7 @@
   "semi": false,
   "plugins": [
     "prettier-plugin-tailwindcss",
-    "prettier-plugin-organize-imports",
-    "prettier-plugin-organize-imports-typescript"
+    "prettier-plugin-organize-imports"
   ],
-  "pluginSearchDirs": ["."]
+  "pluginSearchDirs": ["."],
 }

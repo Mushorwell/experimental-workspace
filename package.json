@@ -17,7 +17,9 @@
     "autoprefixer": "^10.4.14",
     "eslint-config-custom": "workspace:*",
     "postcss": "^8.4.21",
-    "prettier": "latest",
+    "prettier": "^3.2.5",
+    "prettier-config-custom": "workspace:*",
+    "prettier-plugin-tailwindcss": "^0.5.13",
     "tailwind-config": "workspace:*",
     "tailwindcss": "^3.2.7",
     "turbo": "latest"
@@ -27,6 +29,8 @@
   },
   "packageManager": "pnpm@7.29.3",
   "dependencies": {
+    "@types/react-icons": "^3.0.0",
+    "react-icons": "^5.0.1",
     "uuid4": "^2.0.3"
   }
 }
