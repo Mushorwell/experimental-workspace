@@ -3,5 +3,9 @@
     "react-challenge-2",
     "admin-dashboard-1",
     "settings.json"
+  ],
+  "exportall.config.folderListener": [
+    "/packages/utilities/src",
+    "/packages/utilities"
   ]
 }
