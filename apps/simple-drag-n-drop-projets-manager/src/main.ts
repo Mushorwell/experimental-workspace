@@ -39,7 +39,7 @@ function autobind(_: any, _2: string, descriptor: PropertyDescriptor){
   return _method;
 }
 // Object oriented approach
-class ProjectInput{
+export class ProjectInput{
   templateElement: HTMLTemplateElement;
   hostElement: HTMLDivElement;
   element: HTMLFormElement;
@@ -109,4 +109,4 @@ class ProjectInput{
   }
 }
 
-const projInput = new ProjectInput();
+// const projInput = new ProjectInput();
