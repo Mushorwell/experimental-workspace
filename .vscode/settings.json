@@ -2,7 +2,8 @@
   "conventionalCommits.scopes": [
     "react-challenge-2",
     "admin-dashboard-1",
-    "settings.json"
+    "settings.json",
+    "utilities"
   ],
   "exportall.config.folderListener": [
     "/packages/utilities/src",
