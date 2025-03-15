@@ -1,20 +1,39 @@
 {
-  "name": "@experimental-workspace/utilities",
+  "name": "utilities",
+  "private": false,
   "version": "0.0.0",
-  "private": true,
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
   "scripts": {
-    "dev": "echo 'Add dev script here'",
-    "build": "echo 'Add build script here'",
-    "test": "echo 'Add test script here'",
-    "lint": "echo 'Add lint script here'"
-  },
-  "dependencies": {
-    "prettier": "^3.2.5"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
   },
   "devDependencies": {
-    "eslint-config-custom": "workspace:*",
-    "prettier-config-custom": "workspace:*",
-    "tsconfig": "workspace:*",
-    "typescript": "^5.4.5"
-  }
+    "typescript": "~5.7.2",
+    "vite": "^6.2.0"
+  },
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "declaration": true,
+    "sourceMap": true,
+    "composite": true,
+    "baseUrl": ".",
+    "paths": {
+      "@experimental-workspace/utilities": ["src"]
+    }
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
 }
