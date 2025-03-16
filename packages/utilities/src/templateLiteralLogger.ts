@@ -101,8 +101,8 @@ interface AdditionalOptions {
   skipPrimitivesIncludedInMessage?: boolean;
   excludeOutputObject?: boolean;
   flattenOutputObject?: boolean;
-  tableIndexPrefix?: string;
-  tableIndexDelimeter?: string;
+  flattenedObjectIndexPrefix?: string;
+  flattenedObjectIndexDelimeter?: string;
 }
 
 interface LoggerConfig {
@@ -120,16 +120,18 @@ const DEFAULT_PRIMITIVES_ALLOWED: PrimitiveType[] = [
 ];
 
 const defaultConfig: LoggerConfig = {
-  enabled: false,
-  prefix: '',
+  enabled: true,
+  prefix: '🔍[Template Literal Logger]:',
   minLevel: 'debug',
   options: {
     type: 'client',
     primitivesAllowedInTemplateString: DEFAULT_PRIMITIVES_ALLOWED,
     style: {},
-    tableIndexPrefix: '',
-    tableIndexDelimeter: '.',
+    flattenedObjectIndexPrefix: '',
+    flattenedObjectIndexDelimeter: '.',
     flattenOutputObject: false,
+    skipPrimitivesIncludedInMessage: false,
+    excludeOutputObject: false,
   },
 };
 
@@ -245,8 +247,8 @@ export class TemplateLiteralLogger implements TTemplateLiteralLogger {
     message: string,
     templateAllowedPrimitives: any[],
     options: TabulatedOutputObjectOptions = {
-      tableIndexDelimeter: this.config.options?.tableIndexDelimeter,
-      tableIndexPrefix: this.config.options?.tableIndexPrefix,
+      tableIndexDelimeter: this.config.options?.flattenedObjectIndexDelimeter,
+      tableIndexPrefix: this.config.options?.flattenedObjectIndexPrefix,
     },
     ...args: any[]
   ) {

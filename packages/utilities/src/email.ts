@@ -6,8 +6,8 @@ const logger = TemplateLiteralLogger.createLog({ prefix: '[MaskEmail]: ', enable
   style: {
     color: 'green',
   },
-  tableIndexPrefix: '@',
-  tableIndexDelimeter: '.',
+  flattenedObjectIndexPrefix: '@',
+  flattenedObjectIndexDelimeter: '.',
   excludeOutputObject: false,
   skipPrimitivesIncludedInMessage: false,
 }  }, 'log');
