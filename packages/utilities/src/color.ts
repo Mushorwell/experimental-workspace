@@ -1,3 +1,17 @@
+import { TemplateLiteralLogger } from './templateLiteralLogger';
+
+const logger = new TemplateLiteralLogger({ prefix: '[Colors]: ', enabled: true, minLevel: 'debug', options: {
+  type: 'client',
+  primitivesAllowedInTemplateString: ['string', 'number', 'boolean', 'bigint'],
+  style: {
+    color: 'magenta',
+  },
+  flattenedObjectIndexPrefix: '@',
+  flattenedObjectIndexDelimeter: '.',
+  excludeOutputObject: false,
+  skipPrimitivesIncludedInMessage: false,
+}  });
+
 interface IRgbObj {
   red: number;
   green: number;
@@ -13,9 +27,10 @@ const fillHexValArr = (hexValArr: string[]) => {
 };
 
 const handleRgba = (rgbaString: string): IRgbObj => {
-  const [redString, greenString, blueString, ...other] = rgbaString
+  const [redString, greenString, blueString, alphaValue] = rgbaString
     .slice(5, -1)
     .split(',');
+  logger.log`Alpha value : ${alphaValue}`;
   return {
     red: JSON.parse(redString),
     green: JSON.parse(greenString),

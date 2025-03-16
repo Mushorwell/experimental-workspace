@@ -20,6 +20,7 @@
     "prettier": "^3.2.5",
     "prettier-config-custom": "workspace:*",
     "prettier-plugin-tailwindcss": "^0.5.13",
+    "rambdax": "^11.3.1",
     "tailwind-config": "workspace:*",
     "tailwindcss": "^3.2.7",
     "turbo": "latest"
@@ -27,10 +28,13 @@
   "engines": {
     "node": ">=14.0.0"
   },
-  "packageManager": "pnpm@7.29.3",
+  "packageManager": "pnpm@10.6.3",
   "dependencies": {
     "@types/react-icons": "^3.0.0",
+    "next": "^15.2.2",
     "react-icons": "^5.0.1",
-    "uuid4": "^2.0.3"
+    "typescript": "^5.8.2",
+    "uuid4": "^2.0.3",
+    "vite": "^6.2.2"
   }
 }
