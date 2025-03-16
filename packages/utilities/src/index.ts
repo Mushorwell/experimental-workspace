@@ -1,5 +1,4 @@
 export * from './color';
-export * from './counter';
 export * from './email';
 export * from './flattenObject';
 export * from './phone-number';
