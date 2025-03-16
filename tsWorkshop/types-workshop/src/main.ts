@@ -2,6 +2,17 @@ import { setupCounter } from '../lib/main';
 import './style.css';
 import typescriptLogo from './typescript.svg';
 // import { TemplateLiteralLogger}
+import { calculateInvestment, InvestmentData, printResult } from '../lib/calculator';
+
+const investmentData: InvestmentData = {
+  initialAmount: 100000,
+  annualContribution: 100000,
+  expectedReturn: 0.05,
+  duration: 10
+}
+const results = calculateInvestment(investmentData)
+
+printResult(results)
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
