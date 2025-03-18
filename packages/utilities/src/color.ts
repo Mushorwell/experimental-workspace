@@ -6,8 +6,8 @@ const logger = new TemplateLiteralLogger({ prefix: '[Colors]: ', enabled: true, 
   style: {
     color: 'magenta',
   },
-  tableIndexPrefix: '@',
-  tableIndexDelimeter: '.',
+  flattenedObjectIndexPrefix: '@',
+  flattenedObjectIndexDelimeter: '.',
   excludeOutputObject: false,
   skipPrimitivesIncludedInMessage: false,
 }  });

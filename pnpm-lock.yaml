@@ -378,9 +378,84 @@ importers:
 
   packages/utilities:
     devDependencies:
+      eslint-config-custom:
+        specifier: workspace:*
+        version: link:../eslint-config-custom
+      prettier-config-custom:
+        specifier: workspace:*
+        version: link:../prettier-config-custom
+      rollup:
+        specifier: ^4.0.0
+        version: 4.35.0
+      tsconfig:
+        specifier: workspace:*
+        version: link:../tsconfig
       typescript:
         specifier: ~5.7.2
         version: 5.7.3
+      vite:
+        specifier: ^6.2.0
+        version: 6.2.2(@types/node@20.17.24)(jiti@1.21.7)(yaml@2.7.0)
+
+  tsWorkshop/drag-and-drop:
+    devDependencies:
+      eslint-config-custom:
+        specifier: workspace:*
+        version: link:../../packages/eslint-config-custom
+      prettier-config-custom:
+        specifier: workspace:*
+        version: link:../../packages/prettier-config-custom
+      tsconfig:
+        specifier: workspace:*
+        version: link:../../packages/tsconfig
+      typescript:
+        specifier: ~5.7.2
+        version: 5.7.3
+      utilities:
+        specifier: workspace:*
+        version: link:../../packages/utilities
+      vite:
+        specifier: ^6.2.0
+        version: 6.2.2(@types/node@20.17.24)(jiti@1.21.7)(yaml@2.7.0)
+
+  tsWorkshop/simple-exercise:
+    devDependencies:
+      eslint-config-custom:
+        specifier: workspace:*
+        version: link:../../packages/eslint-config-custom
+      prettier-config-custom:
+        specifier: workspace:*
+        version: link:../../packages/prettier-config-custom
+      tsconfig:
+        specifier: workspace:*
+        version: link:../../packages/tsconfig
+      typescript:
+        specifier: ~5.8.2
+        version: 5.8.2
+      utilities:
+        specifier: workspace:*
+        version: link:../../packages/utilities
+      vite:
+        specifier: ^6.2.2
+        version: 6.2.2(@types/node@20.17.24)(jiti@1.21.7)(yaml@2.7.0)
+
+  tsWorkshop/ts-experimental-decorators:
+    devDependencies:
+      eslint-config-custom:
+        specifier: workspace:*
+        version: link:../../packages/eslint-config-custom
+      prettier-config-custom:
+        specifier: workspace:*
+        version: link:../../packages/prettier-config-custom
+      tsconfig:
+        specifier: workspace:*
+        version: link:../../packages/tsconfig
+      typescript:
+        specifier: ~5.7.2
+        version: 5.7.3
+      utilities:
+        specifier: workspace:*
+        version: link:../../packages/utilities
       vite:
         specifier: ^6.2.0
         version: 6.2.2(@types/node@20.17.24)(jiti@1.21.7)(yaml@2.7.0)
