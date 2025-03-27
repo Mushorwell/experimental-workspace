@@ -13,8 +13,8 @@ const logger = new TemplateLiteralLogger({ prefix: '[Calculator]: ', enabled: tr
   style: {
     color: 'green',
   },
-  tableIndexPrefix: '@',
-  tableIndexDelimeter: '.',
+  flattenedObjectIndexPrefix: '@',
+  flattenedObjectIndexDelimeter: '.',
   excludeOutputObject: false,
   skipPrimitivesIncludedInMessage: false,
 }  })
