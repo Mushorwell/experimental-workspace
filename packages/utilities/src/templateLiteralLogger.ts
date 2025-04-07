@@ -220,7 +220,7 @@ export class TemplateLiteralLogger implements TTemplateLiteralLogger {
     args?: any[],
     templateAllowedPrimitives?: any[]
   ) {
-    if (args?.length === 1) return args[0];
+    // if (args?.length === 1) return args[0];
     return args?.reduce((acc, currentArg, index) => {
       const isNonNullNonArrayNonFunctionObj =
         currentArg !== null &&
@@ -240,7 +240,7 @@ export class TemplateLiteralLogger implements TTemplateLiteralLogger {
         return { ...acc, ...currentArg };
       }
       return { ...acc, [`arg${index}`]: currentArg };
-    }, {});
+    }, {} satisfies Record<string, any>);
   }
 
   private structureMessage(

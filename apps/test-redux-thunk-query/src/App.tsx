@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { TemplateLiteralLogger } from 'utilities';
 import styles from './App.module.css';
 import { useAddPost, useDeletePost, useUpdatePost } from './features/posts/postsApi';
 import { deletePost as deletePostAction, fetchPosts } from './features/posts/postsSlice';
 import { AppDispatch, RootState } from './store';
-import { TemplateLiteralLogger } from 'utilities';
 
 const logger = TemplateLiteralLogger.createLog({ 
   prefix: `🧐[🪵postsApi] ${new Date().toISOString()}`,

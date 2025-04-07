@@ -5,4 +5,3 @@ export * from './phone-number';
 export * from './templateLiteralLogger';
 export * from './validate-object';
 export * from './vite-env.d';
-
