@@ -6,8 +6,8 @@ const logger = TemplateLiteralLogger.createLoggerHOF({ prefix: '[SetupCounter]: 
   style: {
     color: 'yellow',
   },
-  tableIndexPrefix: '@',
-  tableIndexDelimeter: '.',
+  flattenedObjectIndexPrefix: '@',
+  flattenedObjectIndexDelimeter: '.',
   excludeOutputObject: false,
   skipPrimitivesIncludedInMessage: false,
 }  })

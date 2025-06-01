@@ -1,0 +1,207 @@
+[
+  {
+    "type": "thread",
+    "threadId": "t1",
+    "title": "Thread 1",
+    "authorId": "u278",
+    "subredditId": "s6",
+    "timestamp": "2025-03-18 14:44:39.197925",
+    "content": "Content of thread 1"
+  },
+  {
+    "type": "thread",
+    "threadId": "t2",
+    "title": "Thread 2",
+    "authorId": "u277",
+    "subredditId": "s12",
+    "timestamp": "2025-03-24 02:08:39.197930",
+    "content": "Content of thread 2"
+  },
+  {
+    "type": "thread",
+    "threadId": "t3",
+    "title": "Thread 3",
+    "authorId": "u395",
+    "subredditId": "s44",
+    "timestamp": "2025-03-31 04:44:39.197934",
+    "content": "Content of thread 3"
+  },
+  {
+    "type": "thread",
+    "threadId": "t4",
+    "title": "Thread 4",
+    "authorId": "u27",
+    "subredditId": "s42",
+    "timestamp": "2025-03-25 02:54:39.197938",
+    "content": "Content of thread 4"
+  },
+  {
+    "type": "thread",
+    "threadId": "t5",
+    "title": "Thread 5",
+    "authorId": "u233",
+    "subredditId": "s28",
+    "timestamp": "2025-03-27 04:42:39.197941",
+    "content": "Content of thread 5"
+  },
+  {
+    "type": "thread",
+    "threadId": "t6",
+    "title": "Thread 6",
+    "authorId": "u268",
+    "subredditId": "s47",
+    "timestamp": "2025-03-19 07:29:39.197944",
+    "content": "Content of thread 6"
+  },
+  {
+    "type": "thread",
+    "threadId": "t7",
+    "title": "Thread 7",
+    "authorId": "u129",
+    "subredditId": "s36",
+    "timestamp": "2025-03-23 10:13:39.197946",
+    "content": "Content of thread 7"
+  },
+  {
+    "type": "thread",
+    "threadId": "t8",
+    "title": "Thread 8",
+    "authorId": "u243",
+    "subredditId": "s4",
+    "timestamp": "2025-03-16 08:39:39.197949",
+    "content": "Content of thread 8"
+  },
+  {
+    "type": "thread",
+    "threadId": "t9",
+    "title": "Thread 9",
+    "authorId": "u60",
+    "subredditId": "s50",
+    "timestamp": "2025-03-28 03:45:39.197952",
+    "content": "Content of thread 9"
+  },
+  {
+    "type": "thread",
+    "threadId": "t10",
+    "title": "Thread 10",
+    "authorId": "u46",
+    "subredditId": "s8",
+    "timestamp": "2025-03-30 18:28:39.197954",
+    "content": "Content of thread 10"
+  }
+]
+Total interactions: 6000
+Total users: 500
+[
+  {
+    "type": "thread",
+    "threadId": "t1",
+    "title": "Thread 1",
+    "authorId": "u466",
+    "subredditId": "s18",
+    "timestamp": "2025-03-08 19:26:01.283765",
+    "content": "Content of thread 1"
+  },
+  {
+    "type": "comment",
+    "commentId": "c2",
+    "authorId": "u479",
+    "timestamp": "2025-03-24 06:23:01.283770",
+    "content": "Comment 2 on thread t1",
+    "threadId": "t1"
+  },
+  {
+    "type": "thread",
+    "threadId": "t3",
+    "title": "Thread 3",
+    "authorId": "u23",
+    "subredditId": "s14",
+    "timestamp": "2025-03-11 03:29:01.283775",
+    "content": "Content of thread 3"
+  },
+  {
+    "type": "thread",
+    "threadId": "t4",
+    "title": "Thread 4",
+    "authorId": "u172",
+    "subredditId": "s44",
+    "timestamp": "2025-03-08 03:17:01.283778",
+    "content": "Content of thread 4"
+  },
+  {
+    "type": "comment",
+    "commentId": "c5",
+    "authorId": "u448",
+    "timestamp": "2025-03-31 08:34:01.283781",
+    "content": "Comment 5 on thread t4",
+    "threadId": "t4"
+  },
+  {
+    "type": "thread",
+    "threadId": "t6",
+    "title": "Thread 6",
+    "authorId": "u418",
+    "subredditId": "s29",
+    "timestamp": "2025-03-21 20:43:01.283784",
+    "content": "Content of thread 6"
+  },
+  {
+    "type": "comment",
+    "commentId": "c7",
+    "authorId": "u354",
+    "timestamp": "2025-03-20 23:27:01.283787",
+    "content": "Comment 7 on thread t3",
+    "threadId": "t3"
+  },
+  {
+    "type": "thread",
+    "threadId": "t8",
+    "title": "Thread 8",
+    "authorId": "u459",
+    "subredditId": "s37",
+    "timestamp": "2025-03-11 23:03:01.283790",
+    "content": "Content of thread 8"
+  },
+  {
+    "type": "thread",
+    "threadId": "t9",
+    "title": "Thread 9",
+    "authorId": "u491",
+    "subredditId": "s46",
+    "timestamp": "2025-03-24 06:29:01.283793",
+    "content": "Content of thread 9"
+  },
+  {
+    "type": "comment",
+    "commentId": "c10",
+    "authorId": "u475",
+    "timestamp": "2025-04-02 02:19:01.283795",
+    "content": "Comment 10 on thread t9",
+    "threadId": "t9"
+  }
+]
+
+Total interactions: 6000
+Total users: 500
+
+Data has been saved to: /Users/tendaishe/Developer/Personal_Projects/experimental-workspace/reddit_data.json
+
+Example user:
+{
+  "userId": "u1",
+  "username": "user_1",
+  "joinDate": "2024-05-02 14:12:01.282524",
+  "karma": 390,
+  "profilePicture": "https://i.pravatar.cc/150?u=u1"
+}
+
+Example interaction:
+{
+  "type": "thread",
+  "threadId": "t1",
+  "title": "Thread 1",
+  "authorId": "u466",
+  "subredditId": "s18",
+  "timestamp": "2025-03-08 19:26:01.283765",
+  "content": "Content of thread 1"
+}

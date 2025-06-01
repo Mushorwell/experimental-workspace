@@ -100,12 +100,13 @@ interface AdditionalOptions {
   primitivesAllowedInTemplateString?: readonly PrimitiveType[];
   skipPrimitivesIncludedInMessage?: boolean;
   excludeOutputObject?: boolean;
-  tableIndexPrefix?: string;
-  tableIndexDelimeter?: string;
+  flattenOutputObject?: boolean;
+  flattenedObjectIndexPrefix?: string;
+  flattenedObjectIndexDelimeter?: string;
 }
 
 interface LoggerConfig {
-  enabled: boolean;
+  enabled?: boolean;
   prefix?: string;
   minLevel?: LogLevel;
   options?: AdditionalOptions;
@@ -119,15 +120,18 @@ const DEFAULT_PRIMITIVES_ALLOWED: PrimitiveType[] = [
 ];
 
 const defaultConfig: LoggerConfig = {
-  enabled: false,
-  prefix: '',
+  enabled: true,
+  prefix: '🔍[Template Literal Logger]:',
   minLevel: 'debug',
   options: {
     type: 'client',
     primitivesAllowedInTemplateString: DEFAULT_PRIMITIVES_ALLOWED,
     style: {},
-    tableIndexPrefix: '',
-    tableIndexDelimeter: '.',
+    flattenedObjectIndexPrefix: '',
+    flattenedObjectIndexDelimeter: '.',
+    flattenOutputObject: false,
+    skipPrimitivesIncludedInMessage: false,
+    excludeOutputObject: false,
   },
 };
 
@@ -216,6 +220,7 @@ export class TemplateLiteralLogger implements TTemplateLiteralLogger {
     args?: any[],
     templateAllowedPrimitives?: any[]
   ) {
+    // if (args?.length === 1) return args[0];
     return args?.reduce((acc, currentArg, index) => {
       const isNonNullNonArrayNonFunctionObj =
         currentArg !== null &&
@@ -235,16 +240,15 @@ export class TemplateLiteralLogger implements TTemplateLiteralLogger {
         return { ...acc, ...currentArg };
       }
       return { ...acc, [`arg${index}`]: currentArg };
-    }, {});
+    }, {} satisfies Record<string, any>);
   }
 
   private structureMessage(
     message: string,
     templateAllowedPrimitives: any[],
-    level: LogLevel,
     options: TabulatedOutputObjectOptions = {
-      tableIndexDelimeter: this.config.options?.tableIndexDelimeter,
-      tableIndexPrefix: this.config.options?.tableIndexPrefix,
+      tableIndexDelimeter: this.config.options?.flattenedObjectIndexDelimeter,
+      tableIndexPrefix: this.config.options?.flattenedObjectIndexPrefix,
     },
     ...args: any[]
   ) {
@@ -262,7 +266,7 @@ export class TemplateLiteralLogger implements TTemplateLiteralLogger {
       return { messagePart, outputObj };
     }
     outputObj = {};
-    if (level === 'table') {
+    if (this.config.options?.flattenOutputObject) {
       outputObj = flattenObjectWithArrays(resultObj, {
         prefix: options.tableIndexPrefix,
         delimiter: options.tableIndexDelimeter,
@@ -313,7 +317,6 @@ export class TemplateLiteralLogger implements TTemplateLiteralLogger {
     const { messagePart, outputObj } = this.structureMessage(
       formattedMessage,
       primitives,
-      level,
       tabulatedOutputObjectOptions,
       ...args
     );
@@ -337,7 +340,7 @@ export class TemplateLiteralLogger implements TTemplateLiteralLogger {
         if (typeof assertion !== 'boolean') {
           assertion = !!assertion;
         }
-        if (Object.keys(outputObj).length === 0) {
+        if (!(typeof outputObj === 'object') || (outputObj && Object.keys(outputObj).length === 0)) {
           consoleMethods[level](assertion, prefixedMessage, styles);
           break;
         }
@@ -357,7 +360,7 @@ export class TemplateLiteralLogger implements TTemplateLiteralLogger {
         consoleMethods[level](prefixedMessage);
         break;
       default:
-        if (Object.keys(outputObj).length === 0) {
+        if (!(typeof outputObj === 'object') || (outputObj && Object.keys(outputObj).length === 0)) {
           consoleMethods[level](prefixedMessage, styles);
           break;
         }
@@ -377,7 +380,7 @@ export class TemplateLiteralLogger implements TTemplateLiteralLogger {
       return strings.join('');
     }
     let result = '';
-    const maxLength = Math.min(strings.length, args.length);
+    const maxLength = Math.max(strings.length, args.length);
 
     for (let index = 0; index < maxLength; index++) {
       result += strings[index];
